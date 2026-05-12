@@ -20,7 +20,7 @@ const data = radarOrder.map((key) => ({
 
 export function RadarStats({ onSelect }: Props) {
   return (
-    <div className="relative h-[260px] w-full">
+    <div className="relative h-full min-h-[180px] w-full">
       <ResponsiveContainer>
         <RadarChart data={data} outerRadius="72%">
           <PolarGrid stroke="rgba(15,76,86,0.35)" />
@@ -35,7 +35,7 @@ export function RadarStats({ onSelect }: Props) {
                   y={y}
                   textAnchor={textAnchor}
                   fill="#ffffff"
-                  fontSize={14}
+                  fontSize={11}
                   fontWeight={700}
                   className="cursor-pointer hover:fill-[var(--itau-orange)]"
                   onClick={(e) => {
