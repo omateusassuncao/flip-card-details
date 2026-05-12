@@ -55,16 +55,22 @@ export function RadarStats({ onSelect }: Props) {
             fill="#fbbf24"
             fillOpacity={0.45}
             strokeWidth={2}
-            dot={{
-              r: 6,
-              fill: "#ea580c",
-              stroke: "#fff",
-              strokeWidth: 2,
-              cursor: "pointer",
-              onClick: (_: unknown, index: number) => {
-                const key = data[index]?.key as DetailKey | undefined;
-                if (key) onSelect(key);
-              },
+            dot={(props: { cx: number; cy: number; index: number }) => {
+              const { cx, cy, index } = props;
+              const key = data[index]?.key as DetailKey | undefined;
+              return (
+                <circle
+                  key={`dot-${index}`}
+                  cx={cx}
+                  cy={cy}
+                  r={6}
+                  fill="#ea580c"
+                  stroke="#fff"
+                  strokeWidth={2}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => key && onSelect(key)}
+                />
+              );
             }}
             activeDot={{ r: 8 }}
           />
