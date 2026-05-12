@@ -25,15 +25,6 @@ function Index() {
       }}
     >
       <FlipCard />
-      <a
-        href="https://github.com/omateusassuncao/flip-card-details"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Repositório no GitHub"
-        className="fixed bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-[#0f4c56] shadow-lg transition hover:scale-110 hover:bg-white"
-      >
-        <Github className="h-5 w-5" />
-      </a>
     </main>
   );
 }
