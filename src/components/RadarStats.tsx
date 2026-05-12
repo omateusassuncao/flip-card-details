@@ -35,7 +35,7 @@ export function RadarStats({ onSelect }: Props) {
                   y={y}
                   textAnchor={textAnchor}
                   fill="#ffffff"
-                  fontSize={11}
+                  fontSize={13}
                   fontWeight={700}
                   className="cursor-pointer hover:fill-[var(--itau-orange)]"
                   onClick={(e) => {

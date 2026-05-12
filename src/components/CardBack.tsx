@@ -69,6 +69,16 @@ export function CardBack({ onSelect }: Props) {
           </div>
         </div>
       </a>
+
+      <a
+        href="https://prezi.com/view/Gr4muRi19hVynHwk4qXE/"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="mt-2 block text-center text-xs font-semibold text-white underline-offset-2 hover:underline sm:text-sm"
+      >
+        Ver apresentação completa no Prezi →
+      </a>
     </div>
   );
 }
