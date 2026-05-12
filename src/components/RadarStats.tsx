@@ -38,7 +38,10 @@ export function RadarStats({ onSelect }: Props) {
                   fontSize={12}
                   fontWeight={700}
                   className="cursor-pointer hover:fill-[var(--itau-orange)]"
-                  onClick={() => item && onSelect(item.key as DetailKey)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    item && onSelect(item.key as DetailKey);
+                  }}
                 >
                   {payload.value}
                   <tspan x={x} dy={14} fontSize={10} fontWeight={600} fill="#0f4c56">
@@ -68,7 +71,10 @@ export function RadarStats({ onSelect }: Props) {
                   stroke="#fff"
                   strokeWidth={2}
                   style={{ cursor: "pointer" }}
-                  onClick={() => key && onSelect(key)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    key && onSelect(key);
+                  }}
                 />
               );
             }}
