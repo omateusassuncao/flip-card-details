@@ -51,7 +51,7 @@ export function CardBack({ onSelect }: Props) {
       </div>
 
       <a
-        href="https://www.linkedin.com/in/mateusvassuncao/"
+        href="https://linkedin.com/in/mateusvassuncao/"
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
