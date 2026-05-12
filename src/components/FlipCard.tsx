@@ -46,9 +46,8 @@ export function FlipCard() {
               WebkitBackfaceVisibility: "hidden",
               transform: "rotateY(180deg)",
             }}
-            onClick={(e) => e.stopPropagation()}
           >
-            <CardBack onSelect={setOpenDetail} onFlip={flip} />
+            <CardBack onSelect={setOpenDetail} />
           </div>
         </div>
       </div>

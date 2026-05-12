@@ -16,7 +16,10 @@ function ItemButton({ k, onSelect }: { k: DetailKey; onSelect: (k: DetailKey) =>
   return (
     <button
       type="button"
-      onClick={() => onSelect(k)}
+      onClick={(e) => {
+        e.stopPropagation();
+        onSelect(k);
+      }}
       className="group flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition hover:bg-[var(--itau-orange)]/10"
     >
       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-[var(--itau-orange)]/15 text-[var(--itau-orange)] transition group-hover:bg-[var(--itau-orange)] group-hover:text-white">
