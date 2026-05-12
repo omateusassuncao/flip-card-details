@@ -13,7 +13,7 @@ export function FlipCard() {
   return (
     <>
       <div
-        className="relative aspect-[3/4] w-full max-w-[480px] cursor-pointer sm:aspect-[4/5]"
+        className="relative aspect-[2/3] w-full max-w-[480px] cursor-pointer sm:aspect-[3/4]"
         style={{ perspective: "1200px" }}
         onClick={flip}
         role="button"
