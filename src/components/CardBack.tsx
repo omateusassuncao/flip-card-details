@@ -14,7 +14,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-3 px-4">
       <span className="h-px flex-1 bg-white/70" />
-      <h3 className="whitespace-nowrap text-center text-lg font-light tracking-wide text-white sm:text-xl">
+      <h3 className="whitespace-nowrap text-center text-xl font-bold tracking-wide text-white sm:text-2xl">
         {children}
       </h3>
       <span className="h-px flex-1 bg-white/70" />
@@ -29,10 +29,10 @@ function ItemButton({ k }: { k: DetailKey }) {
     <div
       className="group flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition hover:bg-[var(--itau-orange)]/10"
     >
-      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[var(--itau-orange)]/15 text-[var(--itau-orange)] transition group-hover:bg-[var(--itau-orange)] group-hover:text-white">
-        <Icon className="h-4 w-4" />
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-[var(--itau-orange)]/15 text-[var(--itau-orange)] transition group-hover:bg-[var(--itau-orange)] group-hover:text-white">
+        <Icon className="h-5 w-5" />
       </span>
-      <span className="text-[11px] font-semibold leading-tight text-[#0f4c56] sm:text-xs">
+      <span className="text-[13px] font-semibold leading-tight text-[#0f4c56] sm:text-sm">
         {item.title.replace(/ — \d+$/, "")}
       </span>
     </div>

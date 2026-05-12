@@ -35,8 +35,8 @@ export function RadarStats({ onSelect }: Props) {
                   y={y}
                   textAnchor={textAnchor}
                   fill="#ffffff"
-                  fontSize={12}
-                  fontWeight={500}
+                  fontSize={14}
+                  fontWeight={700}
                   className="cursor-pointer hover:fill-[var(--itau-orange)]"
                   onClick={(e) => {
                     e.stopPropagation();
