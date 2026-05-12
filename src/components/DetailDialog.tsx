@@ -1,5 +1,5 @@
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+
 import { details, type DetailKey } from "@/data/card-details";
 
 interface Props {
@@ -15,9 +15,9 @@ export function DetailDialog({ detailKey, onClose }: Props) {
       <DialogContent className="overflow-hidden p-0 sm:max-w-lg">
         {detail && (
           <>
-            <VisuallyHidden>
-              <DialogTitle>{detail.title.replace(/ — \d+$/, "")}</DialogTitle>
-            </VisuallyHidden>
+            <DialogTitle className="sr-only">
+              {detail.title.replace(/ — \d+$/, "")}
+            </DialogTitle>
             <img
               src={detail.image}
               alt={detail.title.replace(/ — \d+$/, "")}
