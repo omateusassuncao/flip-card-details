@@ -20,7 +20,7 @@ export function DetailDialog({ detailKey, onClose }: Props) {
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--itau-orange)]/10 text-[var(--itau-orange)]">
                   <Icon className="h-5 w-5" />
                 </span>
-                {detail.title}
+                {detail.title.replace(/ — \d+$/, "")}
               </DialogTitle>
             </DialogHeader>
             <div className="mt-2 overflow-hidden rounded-xl bg-muted">
