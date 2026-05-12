@@ -22,7 +22,7 @@ export function RadarStats({ onSelect }: Props) {
   return (
     <div className="relative h-full min-h-[180px] w-full">
       <ResponsiveContainer>
-        <RadarChart data={data} outerRadius="72%">
+        <RadarChart data={data} outerRadius="60%">
           <PolarGrid stroke="rgba(15,76,86,0.35)" />
           <PolarAngleAxis
             dataKey="subject"
