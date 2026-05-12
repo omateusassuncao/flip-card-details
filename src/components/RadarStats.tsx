@@ -1,0 +1,75 @@
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  ResponsiveContainer,
+} from "recharts";
+import { details, radarOrder, radarValues, type DetailKey } from "@/data/card-details";
+
+interface Props {
+  onSelect: (key: DetailKey) => void;
+}
+
+const data = radarOrder.map((key) => ({
+  key,
+  subject: details[key].title.split(" — ")[0],
+  value: radarValues[key],
+}));
+
+export function RadarStats({ onSelect }: Props) {
+  return (
+    <div className="relative h-[260px] w-full">
+      <ResponsiveContainer>
+        <RadarChart data={data} outerRadius="72%">
+          <PolarGrid stroke="rgba(15,76,86,0.35)" />
+          <PolarAngleAxis
+            dataKey="subject"
+            tick={(props) => {
+              const { x, y, payload, textAnchor } = props;
+              const item = data.find((d) => d.subject === payload.value);
+              return (
+                <text
+                  x={x}
+                  y={y}
+                  textAnchor={textAnchor}
+                  fill="#0f4c56"
+                  fontSize={12}
+                  fontWeight={700}
+                  className="cursor-pointer hover:fill-[var(--itau-orange)]"
+                  onClick={() => item && onSelect(item.key as DetailKey)}
+                >
+                  {payload.value}
+                  <tspan x={x} dy={14} fontSize={10} fontWeight={600} fill="#0f4c56">
+                    {item?.value}
+                  </tspan>
+                </text>
+              );
+            }}
+          />
+          <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
+          <Radar
+            dataKey="value"
+            stroke="#f59e0b"
+            fill="#fbbf24"
+            fillOpacity={0.45}
+            strokeWidth={2}
+            dot={{
+              r: 6,
+              fill: "#ea580c",
+              stroke: "#fff",
+              strokeWidth: 2,
+              cursor: "pointer",
+              onClick: (_: unknown, index: number) => {
+                const key = data[index]?.key as DetailKey | undefined;
+                if (key) onSelect(key);
+              },
+            }}
+            activeDot={{ r: 8 }}
+          />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
