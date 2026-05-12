@@ -34,9 +34,9 @@ export function RadarStats({ onSelect }: Props) {
                   x={x}
                   y={y}
                   textAnchor={textAnchor}
-                  fill="#0f4c56"
+                  fill="#ffffff"
                   fontSize={12}
-                  fontWeight={700}
+                  fontWeight={500}
                   className="cursor-pointer hover:fill-[var(--itau-orange)]"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -44,9 +44,6 @@ export function RadarStats({ onSelect }: Props) {
                   }}
                 >
                   {payload.value}
-                  <tspan x={x} dy={14} fontSize={10} fontWeight={600} fill="#0f4c56">
-                    {item?.value}
-                  </tspan>
                 </text>
               );
             }}
