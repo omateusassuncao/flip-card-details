@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github } from "lucide-react";
 import { FlipCard } from "@/components/FlipCard";
 
 export const Route = createFileRoute("/")({
