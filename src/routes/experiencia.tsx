@@ -135,8 +135,8 @@ function ExperienciaPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col gap-4 sm:flex-row sm:gap-5">
-                <ul className="space-y-1.5 sm:flex-1">
+              <div className="flex flex-row gap-4 sm:gap-5">
+                <ul className="w-1/2 space-y-1.5">
                   {s.roles.map((role, i) => (
                     <li
                       key={i}
@@ -156,7 +156,7 @@ function ExperienciaPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="border-t border-[#0f4c56]/15 pt-3 sm:w-[30%] sm:shrink-0 sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
+                <div className="w-1/2 shrink-0 border-l border-[#0f4c56]/15 pl-4">
                   <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-[var(--itau-orange)] sm:text-sm">
                     Tecnologias e Skills
                   </h3>
@@ -167,7 +167,7 @@ function ExperienciaPage() {
                         className="flex items-start gap-1.5 text-xs text-[#0f4c56] sm:text-sm"
                       >
                         <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#0f4c56]/60" />
-                        <span>{sk}</span>
+                        <span className={sk === "Governança COE" || sk === "Devin (Deva)" ? "font-bold" : undefined}>{sk}</span>
                       </li>
                     ))}
                   </ul>
