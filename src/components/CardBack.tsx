@@ -49,12 +49,10 @@ export function CardBack({ onSelect }: Props) {
 
       <SectionTitle>Minha carreira</SectionTitle>
 
-      <a
-        href="https://linkedin.com/in/mateusvassuncao/"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to="/experiencia"
         onClick={(e) => e.stopPropagation()}
-        aria-label="Abrir LinkedIn de Mateus Assunção"
+        aria-label="Ver experiência profissional"
         className="mt-2 block rounded-2xl bg-white/95 p-2 shadow-lg transition hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[var(--itau-orange)] sm:mt-3 sm:p-3"
       >
         <div className="grid grid-cols-2 gap-x-2 divide-x divide-[var(--card-teal-deep)]/30 sm:gap-x-3">
