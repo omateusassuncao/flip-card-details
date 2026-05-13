@@ -41,6 +41,12 @@ const sections: Section[] = [
       },
       { label: "Analista Sr. / Scrum Master - GPS" },
     ],
+    skills: [
+      "Gestão de Projetos PMO",
+      "Gestão de Projetos Ágeis / SCRUM",
+      "Sharepoint",
+      "Power Apps e Power Automate (PL-900)",
+    ],
   },
   {
     title: "Ambev Global Tech",
@@ -54,6 +60,12 @@ const sections: Section[] = [
           "2 Squads de Operação e Desenvolvimento com clientes externos",
       },
     ],
+    skills: [
+      "Power Platform (PL-100, 200 e 400)",
+      "Power BI",
+      "Governança COE",
+      "Azure (AZ-900)",
+    ],
   },
   {
     title: "Itaú Unibanco",
@@ -64,6 +76,13 @@ const sections: Section[] = [
         label: "Analista Sr. Tech Lead",
         detail: "Squad com foco em integrações AWS e Dynamics",
       },
+    ],
+    skills: [
+      "Dynamics 365",
+      ".NET e C#",
+      "Javascript",
+      "AWS (Cloud Pratictioner)",
+      "Devin (Deva)",
     ],
   },
 ];
