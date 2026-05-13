@@ -24,6 +24,7 @@ type Section = {
   title: string;
   period: string;
   roles: Role[];
+  skills: string[];
 };
 
 const sections: Section[] = [
