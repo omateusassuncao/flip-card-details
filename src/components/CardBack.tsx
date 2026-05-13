@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { RadarStats } from "./RadarStats";
 import {
   bottomLeft,
@@ -70,15 +71,24 @@ export function CardBack({ onSelect }: Props) {
         </div>
       </a>
 
-      <a
-        href="https://prezi.com/view/Gr4muRi19hVynHwk4qXE/"
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={(e) => e.stopPropagation()}
-        className="mt-2 block text-center text-xs font-semibold text-white underline-offset-2 hover:underline sm:text-sm"
-      >
-        Ver apresentação completa no Prezi →
-      </a>
+      <div className="mt-2 flex flex-col items-center gap-1 sm:flex-row sm:justify-center sm:gap-4">
+        <Link
+          to="/experiencia"
+          onClick={(e) => e.stopPropagation()}
+          className="text-xs font-semibold text-white underline-offset-2 hover:underline sm:text-sm"
+        >
+          Ver experiência profissional →
+        </Link>
+        <a
+          href="https://prezi.com/view/Gr4muRi19hVynHwk4qXE/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="text-xs font-semibold text-white underline-offset-2 hover:underline sm:text-sm"
+        >
+          Ver apresentação no Prezi →
+        </a>
+      </div>
     </div>
   );
 }
