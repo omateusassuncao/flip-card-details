@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, Briefcase } from "lucide-react";
+import { ArrowLeft, Briefcase, Linkedin } from "lucide-react";
 
 export const Route = createFileRoute("/experiencia")({
   component: ExperienciaPage,
