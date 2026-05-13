@@ -77,7 +77,7 @@ function ExperienciaPage() {
             Experiência Profissional
           </h1>
           <p className="mt-2 text-sm opacity-90 sm:text-base">
-            Uma trajetória entre tecnologia, estratégia e liderança.
+            Uma trajetória entre tecnologia, gestão de projetos e liderança.
           </p>
         </header>
 
