@@ -23,7 +23,7 @@ type Section = {
 
 const sections: Section[] = [
   {
-    title: "Itaú",
+    title: "Itaú Unibanco",
     period: "2016 à 2021",
     roles: [
       "Estagiário PMO - Projetos Varejo",
@@ -34,7 +34,7 @@ const sections: Section[] = [
     ],
   },
   {
-    title: "Ambev Tech",
+    title: "Ambev Global Tech",
     period: "2021 à 2023",
     roles: [
       "Desenvolvedor COE Power Platform (Terceiro)",
@@ -43,7 +43,7 @@ const sections: Section[] = [
     ],
   },
   {
-    title: "Itaú",
+    title: "Itaú Unibanco",
     period: "desde 2024",
     roles: [
       "Analista Sr. / Desenvolvedor Dynamics",
