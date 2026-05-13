@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, Briefcase } from "lucide-react";
+import { ArrowLeft, Briefcase, Linkedin } from "lucide-react";
 
 export const Route = createFileRoute("/experiencia")({
   component: ExperienciaPage,
@@ -23,7 +23,7 @@ type Section = {
 
 const sections: Section[] = [
   {
-    title: "Itaú",
+    title: "Itaú Unibanco",
     period: "2016 à 2021",
     roles: [
       "Estagiário PMO - Projetos Varejo",
@@ -34,7 +34,7 @@ const sections: Section[] = [
     ],
   },
   {
-    title: "Ambev Tech",
+    title: "Ambev Global Tech",
     period: "2021 à 2023",
     roles: [
       "Desenvolvedor COE Power Platform (Terceiro)",
@@ -43,7 +43,7 @@ const sections: Section[] = [
     ],
   },
   {
-    title: "Itaú",
+    title: "Itaú Unibanco",
     period: "desde 2024",
     roles: [
       "Analista Sr. / Desenvolvedor Dynamics",
@@ -77,7 +77,7 @@ function ExperienciaPage() {
             Experiência Profissional
           </h1>
           <p className="mt-2 text-sm opacity-90 sm:text-base">
-            Uma trajetória entre tecnologia, estratégia e liderança.
+            Uma trajetória entre tecnologia, gestão de projetos e liderança.
           </p>
         </header>
 
@@ -113,6 +113,18 @@ function ExperienciaPage() {
               </ul>
             </article>
           ))}
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://www.linkedin.com/in/mateusvassuncao/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir LinkedIn de Mateus Assunção"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#0f4c56] shadow-md transition hover:scale-110 hover:bg-white"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
         </div>
       </div>
     </main>
