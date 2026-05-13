@@ -24,6 +24,7 @@ type Section = {
   title: string;
   period: string;
   roles: Role[];
+  skills: string[];
 };
 
 const sections: Section[] = [
@@ -40,6 +41,12 @@ const sections: Section[] = [
       },
       { label: "Analista Sr. / Scrum Master - GPS" },
     ],
+    skills: [
+      "Gestão de Projetos PMO",
+      "Gestão de Projetos Ágeis / SCRUM",
+      "Sharepoint",
+      "Power Apps e Power Automate (PL-900)",
+    ],
   },
   {
     title: "Ambev Global Tech",
@@ -53,6 +60,12 @@ const sections: Section[] = [
           "2 Squads de Operação e Desenvolvimento com clientes externos",
       },
     ],
+    skills: [
+      "Power Platform (PL-100, 200 e 400)",
+      "Power BI",
+      "Governança COE",
+      "Azure (AZ-900)",
+    ],
   },
   {
     title: "Itaú Unibanco",
@@ -63,6 +76,13 @@ const sections: Section[] = [
         label: "Analista Sr. Tech Lead",
         detail: "Squad com foco em integrações AWS e Dynamics",
       },
+    ],
+    skills: [
+      "Dynamics 365",
+      ".NET e C#",
+      "Javascript",
+      "AWS (Cloud Pratictioner)",
+      "Devin (Deva)",
     ],
   },
 ];
@@ -115,26 +135,44 @@ function ExperienciaPage() {
                   </p>
                 </div>
               </div>
-              <ul className="space-y-1.5">
-                {s.roles.map((role, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-2 text-sm text-[#0f4c56] sm:text-base"
-                  >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--itau-orange)]" />
-                    <span>
-                      <span className={role.detail ? "font-bold" : undefined}>
-                        {role.label}
-                      </span>
-                      {role.detail && (
-                        <span className="block text-xs font-semibold italic text-[#0f4c56]/80 sm:text-sm">
-                          {role.detail}
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-5">
+                <ul className="space-y-1.5 sm:flex-1">
+                  {s.roles.map((role, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2 text-sm text-[#0f4c56] sm:text-base"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--itau-orange)]" />
+                      <span>
+                        <span className={role.detail ? "font-bold" : undefined}>
+                          {role.label}
                         </span>
-                      )}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                        {role.detail && (
+                          <span className="block text-xs font-semibold italic text-[#0f4c56]/80 sm:text-sm">
+                            {role.detail}
+                          </span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t border-[#0f4c56]/15 pt-3 sm:w-[30%] sm:shrink-0 sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
+                  <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-[var(--itau-orange)] sm:text-sm">
+                    Tecnologias e Skills
+                  </h3>
+                  <ul className="space-y-1">
+                    {s.skills.map((sk, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-1.5 text-xs text-[#0f4c56] sm:text-sm"
+                      >
+                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#0f4c56]/60" />
+                        <span>{sk}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </article>
           ))}
         </div>
