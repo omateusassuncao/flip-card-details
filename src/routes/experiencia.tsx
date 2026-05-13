@@ -15,10 +15,15 @@ export const Route = createFileRoute("/experiencia")({
   }),
 });
 
+type Role = {
+  label: string;
+  detail?: string;
+};
+
 type Section = {
   title: string;
   period: string;
-  roles: string[];
+  roles: Role[];
 };
 
 const sections: Section[] = [
@@ -26,28 +31,38 @@ const sections: Section[] = [
     title: "Itaú Unibanco",
     period: "2016 à 2021",
     roles: [
-      "Estagiário PMO - Projetos Varejo",
-      "Analista de Projetos e Riscos Jr - Franquias",
-      "Analista de Planejamento Estratégico Pl",
-      "Analista Sr. / Desenvolvedor Power Apps",
-      "Analista Sr. / Scrum Master - GPS",
+      { label: "Estagiário PMO - Projetos Varejo" },
+      { label: "Analista de Projetos e Riscos Jr - Franquias" },
+      { label: "Analista de Planejamento Estratégico Pl" },
+      {
+        label: "Analista Sr. / Desenvolvedor Power Apps",
+        detail: "Início da transição profissional",
+      },
+      { label: "Analista Sr. / Scrum Master - GPS" },
     ],
   },
   {
     title: "Ambev Global Tech",
     period: "2021 à 2023",
     roles: [
-      "Desenvolvedor COE Power Platform (Terceiro)",
-      "Tech Lead e Consultor",
-      "Coordenador de Operação",
+      { label: "Desenvolvedor COE Power Platform (Terceiro)" },
+      { label: "Tech Lead e Consultor" },
+      {
+        label: "Coordenador de Operação",
+        detail:
+          "2 Squads de Operação e Desenvolvimento com clientes externos",
+      },
     ],
   },
   {
     title: "Itaú Unibanco",
     period: "desde 2024",
     roles: [
-      "Analista Sr. / Desenvolvedor Dynamics",
-      "Analista Sr. Tech Lead",
+      { label: "Analista Sr. / Desenvolvedor Dynamics" },
+      {
+        label: "Analista Sr. Tech Lead",
+        detail: "Squad com foco em integrações AWS e Dynamics",
+      },
     ],
   },
 ];
@@ -107,7 +122,16 @@ function ExperienciaPage() {
                     className="flex items-start gap-2 text-sm text-[#0f4c56] sm:text-base"
                   >
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--itau-orange)]" />
-                    <span>{role}</span>
+                    <span>
+                      <span className={role.detail ? "font-bold" : undefined}>
+                        {role.label}
+                      </span>
+                      {role.detail && (
+                        <span className="block text-xs font-semibold italic text-[#0f4c56]/80 sm:text-sm">
+                          {role.detail}
+                        </span>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>
