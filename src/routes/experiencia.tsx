@@ -65,6 +65,7 @@ const sections: Section[] = [
       "Power BI",
       "Governança COE",
       "Azure (AZ-900)",
+      "Língua Inglesa",
     ],
   },
   {
