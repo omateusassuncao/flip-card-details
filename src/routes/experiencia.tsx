@@ -114,6 +114,18 @@ function ExperienciaPage() {
             </article>
           ))}
         </div>
+
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://www.linkedin.com/in/mateusvassuncao/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir LinkedIn de Mateus Assunção"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#0f4c56] shadow-md transition hover:scale-110 hover:bg-white"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
+        </div>
       </div>
     </main>
   );
