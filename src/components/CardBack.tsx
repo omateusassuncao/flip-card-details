@@ -67,16 +67,9 @@ export function CardBack({ onSelect }: Props) {
             ))}
           </div>
         </div>
-      </a>
+      </Link>
 
-      <div className="mt-2 flex flex-col items-center gap-1 sm:flex-row sm:justify-center sm:gap-4">
-        <Link
-          to="/experiencia"
-          onClick={(e) => e.stopPropagation()}
-          className="text-xs font-semibold text-white underline-offset-2 hover:underline sm:text-sm"
-        >
-          Ver experiência profissional →
-        </Link>
+      <div className="mt-2 flex justify-center">
         <a
           href="https://prezi.com/view/Gr4muRi19hVynHwk4qXE/"
           target="_blank"
