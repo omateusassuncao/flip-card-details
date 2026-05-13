@@ -77,7 +77,7 @@ export function CardBack({ onSelect }: Props) {
           onClick={(e) => e.stopPropagation()}
           className="text-xs font-semibold text-white underline-offset-2 hover:underline sm:text-sm"
         >
-          Ver apresentação no Prezi →
+          Acesse a apresentação completa →
         </a>
       </div>
     </div>
