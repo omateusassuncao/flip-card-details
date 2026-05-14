@@ -69,17 +69,6 @@ export function CardBack({ onSelect }: Props) {
         </div>
       </Link>
 
-      <div className="mt-2 flex justify-center">
-        <a
-          href="https://prezi.com/view/Gr4muRi19hVynHwk4qXE/"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
-          className="text-xs font-semibold text-white underline-offset-2 hover:underline sm:text-sm"
-        >
-          Acesse a apresentação completa →
-        </a>
-      </div>
     </div>
   );
 }
